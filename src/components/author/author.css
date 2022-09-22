@@ -1,0 +1,28 @@
+.author-wrapper {
+    padding: 1rem;
+    display: grid;
+    background-color: var(--color-8);
+    justify-content: center;
+}
+
+.author {
+    max-width: 500px;
+    display: flex;
+    gap: .5rem;
+}
+
+.author-wrapper .author-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 520px) {
+    .author {
+        max-width: 400px;
+        display: flex;
+        gap: .5rem;
+    }
+
+}

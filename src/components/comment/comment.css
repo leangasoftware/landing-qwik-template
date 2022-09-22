@@ -1,0 +1,29 @@
+.comment {
+    position: relative;
+    min-height: 100px;
+}
+
+
+.comment .comment-wrapper {
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+.comment .quote {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-image: url('/img/quote.svg');
+}
+
+.comment .comment-text {
+    font-size: 1.3rem;
+}
+
+.uis-star {
+    color: #ffd500;
+}

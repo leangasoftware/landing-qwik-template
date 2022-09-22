@@ -1,0 +1,34 @@
+.footer {
+    padding: 0rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-top: solid 1px var(--color-3);
+}
+
+img {
+    height: 30px;
+    object-fit: contain;
+
+}
+
+.footer div {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.footer .section-wrapper-footer {
+    padding: 2rem;
+    width: 800px;
+    max-width: 800px;
+    gap: 2rem;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .footer-logo {
+    display: flex;
+    gap: 2rem;
+}

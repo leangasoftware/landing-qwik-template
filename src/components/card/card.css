@@ -1,0 +1,13 @@
+.card {
+    background-color: var(--color-1);
+    padding: 1rem;
+    box-shadow: var(--box-shadow-1);
+    font-size: 1.2rem;
+}
+
+.card div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}

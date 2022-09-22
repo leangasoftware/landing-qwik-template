@@ -1,0 +1,29 @@
+.section {
+    padding: 0rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.section .section-wrapper-topic {
+    padding: 2rem;
+    width: 800px;
+    max-width: 800px;
+}
+
+.section h1 {
+    padding: 1rem 0;
+    font-size: 3.5rem;
+}
+
+.section .continue {
+    padding: 1rem 1rem 0;
+}
+
+@media screen and (max-width: 520px) {
+    .section .section-wrapper-topic {
+        max-width: 400px;
+
+    }
+
+}

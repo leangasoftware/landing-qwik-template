@@ -1,0 +1,45 @@
+section {
+    padding: 0rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+section .sction-cta-wrapper {
+    padding: 2rem 2rem 3rem;
+    text-align: center;
+}
+
+section .link-cta {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    box-shadow: var(--box-shadow-1)
+}
+
+section .text-small {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+
+section .link-color-a {
+    background-color: #e4ff1a;
+    color: var(--color-2);
+    border: solid 2px var(--color-1);
+    outline: dashed 2px var(--color-2);
+    transition: all ease 150ms;
+}
+
+
+section .link-color-b {
+    background-color: #77ff00;
+    color: var(--color-2);
+    border: solid 2px var(--color-1);
+    outline: dashed 2px var(--color-2);
+}
+
+section .link-color-a:hover, section .link-color-b:hover {
+    background-color: var(--color-2);
+    color: var(--color-1);
+}
