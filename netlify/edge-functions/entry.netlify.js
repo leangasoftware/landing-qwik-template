@@ -5159,107 +5159,6 @@ const Footer = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
     })
   });
 }, "s_ZG5NmNv3vZg"));
-const menuStyle = ".menu-wrapper {\r\n    border-bottom: solid 1px var(--color-3);\r\n    font-size: 1.6rem;\r\n}\r\n\r\n.menu-wrapper .menu {\r\n    margin: 0;\r\n    padding: 0;\r\n    display: flex;\r\n    list-style: none;\r\n}\r\n\r\n.menu-wrapper .menu li {\r\n    padding: .5rem 1rem;\r\n}\r\n\r\n.menu-wrapper .menu li {\r\n    display: flex;\r\n    gap: .25rem;\r\n    cursor: pointer;\r\n    transition: all ease-in 130ms;\r\n    margin-bottom: -1px;\r\n    border-right: solid 1px var(--color-3);\r\n}\r\n\r\n.menu-wrapper .menu li a {\r\n    display: flex;\r\n    gap: .25rem;\r\n    align-items: center;\r\n    align-content: center;\r\n}\r\n\r\n.menu-wrapper .menu li span {\r\n    display: flex;\r\n    align-items: center;\r\n    align-content: center;\r\n}\r\n\r\n.menu-wrapper .menu li:first {\r\n    border-right-color: transparent;\r\n}\r\n\r\n\r\n.menu-wrapper .menu li:hover {\r\n    background-color: var(--color-3);\r\n}\r\n\r\n.menu-wrapper .menu .logo {\r\n    height: 20px;\r\n    object-fit: contain;\r\n}\r\n\r\n.menu-wrapper .menu-section {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n@media screen and (max-width: 520px) {\r\n    .menu-wrapper .menu li {\r\n        font-size: 1rem;\r\n    }\r\n}";
-const Menu = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  useStylesScopedQrl(inlinedQrl(menuStyle, "s_n70Gc0CIChg"));
-  const state = useStore({
-    items: [
-      {
-        name: "Backend",
-        link: "/node",
-        icon: "/img/ts.svg",
-        size: {
-          w: "20px",
-          h: "20px"
-        }
-      },
-      {
-        name: "Cloud AWS",
-        link: "aws",
-        icon: "/img/aws-ec2.svg",
-        size: {
-          w: "20px",
-          h: "20px"
-        }
-      }
-    ],
-    cta: {
-      name: "\xBFQui\xE9n soy?",
-      link: "#section-video"
-    }
-  });
-  const renderLink = state.items.map((item) => /* @__PURE__ */ jsx("li", {
-    children: /* @__PURE__ */ jsx("a", {
-      href: item.link,
-      children: [
-        /* @__PURE__ */ jsx("span", {
-          children: /* @__PURE__ */ jsx("img", {
-            width: item.size.w,
-            height: item.size.h,
-            className: "logo",
-            src: item.icon,
-            alt: ""
-          })
-        }),
-        item.name
-      ]
-    })
-  }));
-  const renderCta = /* @__PURE__ */ jsx("li", {
-    children: /* @__PURE__ */ jsx("a", {
-      href: state.cta.link,
-      children: state.cta.name
-    })
-  });
-  return /* @__PURE__ */ jsx("div", {
-    className: "menu-wrapper",
-    children: /* @__PURE__ */ jsx("div", {
-      className: "menu-section",
-      children: [
-        /* @__PURE__ */ jsx("ul", {
-          className: "menu",
-          children: renderLink
-        }),
-        /* @__PURE__ */ jsx("ul", {
-          className: "menu",
-          children: renderCta
-        })
-      ]
-    })
-  });
-}, "s_8j6XIgveZCc"));
-const layout = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  return /* @__PURE__ */ jsx(Fragment, {
-    children: [
-      /* @__PURE__ */ jsx(Menu, {}),
-      /* @__PURE__ */ jsx(Slot, {}),
-      " ",
-      /* @__PURE__ */ jsx(Footer, {})
-    ]
-  });
-}, "s_z8saDCzoko8"));
-const Layout_ = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  default: layout
-}, Symbol.toStringTag, { value: "Module" }));
-const onGet = async ({ request, response }) => {
-  const { url } = request;
-  if (url.includes("node"))
-    throw response.redirect("/node");
-  if (url.includes("aws")) {
-    console.log(url);
-    throw response.redirect("/aws");
-  }
-  throw response.redirect("/node");
-};
-const index$1 = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
-  return /* @__PURE__ */ jsx(Fragment, {});
-}, "s_lWjUoUq84ME"));
-const Index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
-  __proto__: null,
-  onGet,
-  default: index$1
-}, Symbol.toStringTag, { value: "Module" }));
 const isServer = true;
 const isBrowser = false;
 const ContentContext = /* @__PURE__ */ createContext("qc-c");
@@ -5630,6 +5529,109 @@ const prefetchLinkResources = (prefetchUrl, isOnVisible) => {
     loadClientData(prefetchUrl);
 };
 let windowInnerWidth = 0;
+const menuStyle = ".menu-wrapper {\r\n    border-bottom: solid 1px var(--color-3);\r\n    font-size: 1.6rem;\r\n}\r\n\r\n.menu-wrapper .menu {\r\n    margin: 0;\r\n    padding: 0;\r\n    display: flex;\r\n    list-style: none;\r\n}\r\n\r\n.menu-wrapper .menu li {\r\n    padding: .5rem 1rem;\r\n}\r\n\r\n.menu-wrapper .menu li {\r\n    display: flex;\r\n    gap: .25rem;\r\n    cursor: pointer;\r\n    transition: all ease-in 130ms;\r\n    margin-bottom: -1px;\r\n    border-right: solid 1px var(--color-3);\r\n}\r\n\r\n.menu-wrapper .menu li a {\r\n    display: flex;\r\n    gap: .25rem;\r\n    align-items: center;\r\n    align-content: center;\r\n}\r\n\r\n.menu-wrapper .menu li span {\r\n    display: flex;\r\n    align-items: center;\r\n    align-content: center;\r\n}\r\n\r\n.menu-wrapper .menu li:first {\r\n    border-right-color: transparent;\r\n}\r\n\r\n\r\n.menu-wrapper .menu li:hover {\r\n    background-color: var(--color-3);\r\n}\r\n\r\n.menu-wrapper .menu .logo {\r\n    height: 20px;\r\n    object-fit: contain;\r\n}\r\n\r\n.menu-wrapper .menu-section {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.menu-wrapper .active {\r\n    background-color: var(--color-3);\r\n}\r\n\r\n@media screen and (max-width: 520px) {\r\n    .menu-wrapper .menu li {\r\n        font-size: 1rem;\r\n    }\r\n}";
+const Menu = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  const { params } = useLocation();
+  useStylesScopedQrl(inlinedQrl(menuStyle, "s_n70Gc0CIChg"));
+  const state = useStore({
+    items: [
+      {
+        name: "Backend",
+        link: "node",
+        icon: "/img/ts.svg",
+        size: {
+          w: "20px",
+          h: "20px"
+        }
+      },
+      {
+        name: "Cloud AWS",
+        link: "aws",
+        icon: "/img/aws-ec2.svg",
+        size: {
+          w: "20px",
+          h: "20px"
+        }
+      }
+    ],
+    cta: {
+      name: "\xBFQui\xE9n soy?",
+      link: "#section-video"
+    }
+  });
+  const renderLink = state.items.map((item) => /* @__PURE__ */ jsx("li", {
+    class: params.topic === `${item.link}` ? "active" : "",
+    children: /* @__PURE__ */ jsx("a", {
+      href: item.link,
+      children: [
+        /* @__PURE__ */ jsx("span", {
+          children: /* @__PURE__ */ jsx("img", {
+            width: item.size.w,
+            height: item.size.h,
+            className: "logo",
+            src: item.icon,
+            alt: ""
+          })
+        }),
+        item.name
+      ]
+    })
+  }));
+  const renderCta = /* @__PURE__ */ jsx("li", {
+    children: /* @__PURE__ */ jsx("a", {
+      href: state.cta.link,
+      children: state.cta.name
+    })
+  });
+  return /* @__PURE__ */ jsx("div", {
+    className: "menu-wrapper",
+    children: /* @__PURE__ */ jsx("div", {
+      className: "menu-section",
+      children: [
+        /* @__PURE__ */ jsx("ul", {
+          className: "menu",
+          children: renderLink
+        }),
+        /* @__PURE__ */ jsx("ul", {
+          className: "menu",
+          children: renderCta
+        })
+      ]
+    })
+  });
+}, "s_8j6XIgveZCc"));
+const layout = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  return /* @__PURE__ */ jsx(Fragment, {
+    children: [
+      /* @__PURE__ */ jsx(Menu, {}),
+      /* @__PURE__ */ jsx(Slot, {}),
+      " ",
+      /* @__PURE__ */ jsx(Footer, {})
+    ]
+  });
+}, "s_z8saDCzoko8"));
+const Layout_ = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  default: layout
+}, Symbol.toStringTag, { value: "Module" }));
+const onGet = async ({ request, response }) => {
+  const { url } = request;
+  if (url.includes("node"))
+    throw response.redirect("/node");
+  if (url.includes("aws")) {
+    console.log(url);
+    throw response.redirect("/aws");
+  }
+  throw response.redirect("/node");
+};
+const index$1 = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
+  return /* @__PURE__ */ jsx(Fragment, {});
+}, "s_lWjUoUq84ME"));
+const Index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  onGet,
+  default: index$1
+}, Symbol.toStringTag, { value: "Module" }));
 const sectionCtaStyle = "section {\r\n    padding: 0rem;\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n\r\nsection .sction-cta-wrapper {\r\n    padding: 2rem 2rem 3rem;\r\n    text-align: center;\r\n}\r\n\r\nsection .link-cta {\r\n    background-color: var(--color-2);\r\n    color: var(--color-1);\r\n    padding: .5rem 1rem;\r\n    font-size: 2rem;\r\n    box-shadow: var(--box-shadow-1)\r\n}\r\n\r\nsection .text-small {\r\n    padding: 1rem 0;\r\n    font-size: 1.2rem;\r\n}\r\n\r\nsection .link-color-a {\r\n    background-color: #e4ff1a;\r\n    color: var(--color-2);\r\n    border: solid 2px var(--color-1);\r\n    outline: dashed 2px var(--color-2);\r\n    transition: all ease 150ms;\r\n}\r\n\r\n\r\nsection .link-color-b {\r\n    background-color: #77ff00;\r\n    color: var(--color-2);\r\n    border: solid 2px var(--color-1);\r\n    outline: dashed 2px var(--color-2);\r\n}\r\n\r\nsection .link-color-a:hover, section .link-color-b:hover {\r\n    background-color: var(--color-2);\r\n    color: var(--color-1);\r\n}";
 const SectionCta = /* @__PURE__ */ componentQrl(inlinedQrl(({ text, secondText, link, style = "" }) => {
   useStylesScopedQrl(inlinedQrl(sectionCtaStyle, "s_M0FIA8mDlgA"));
@@ -6171,8 +6173,8 @@ const Topic = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
 }, Symbol.toStringTag, { value: "Module" }));
 const Layout = () => Layout_;
 const routes = [
-  [/^\/$/, [Layout, () => Index], void 0, "/", ["q-e62d0a5c.js", "q-16d0044b.js"]],
-  [/^\/([^/]+?)\/?$/, [Layout, () => Topic], ["topic"], "/[topic]", ["q-e62d0a5c.js", "q-a75d7ecb.js", "q-c7bb4051.js"]]
+  [/^\/$/, [Layout, () => Index], void 0, "/", ["q-81118e01.js", "q-b94d057b.js"]],
+  [/^\/([^/]+?)\/?$/, [Layout, () => Topic], ["topic"], "/[topic]", ["q-81118e01.js", "q-06acf81d.js", "q-542a3d30.js"]]
 ];
 const menus = [];
 const trailingSlash = false;
@@ -7441,33 +7443,20 @@ function collectRenderSymbols(renderSymbols, elements) {
     }
   }
 }
-const manifest = { "symbols": { "s_hA9UPaY8sNQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onClick", "canonicalFilename": "s_ha9upay8snq", "hash": "hA9UPaY8sNQ", "ctxKind": "event", "ctxName": "onClick$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_skxgNVWVOT8": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onMouseOver", "canonicalFilename": "s_skxgnvwvot8", "hash": "skxgNVWVOT8", "ctxKind": "event", "ctxName": "onMouseOver$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_uVE5iM9H73c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onQVisible", "canonicalFilename": "s_uve5im9h73c", "hash": "uVE5iM9H73c", "ctxKind": "event", "ctxName": "onQVisible$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_AaAlzKH0KlQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component_useWatch", "canonicalFilename": "s_aaalzkh0klq", "hash": "AaAlzKH0KlQ", "ctxKind": "function", "ctxName": "useWatch$", "captures": true, "parent": "s_z1nvHyEppoI" }, "s_8tRoNT5nsJU": { "origin": "components/section-video/section-video.tsx", "displayName": "section_video_component_useClientEffect", "canonicalFilename": "s_8tront5nsju", "hash": "8tRoNT5nsJU", "ctxKind": "function", "ctxName": "useClientEffect$", "captures": true, "parent": "s_Xk3MjqlAJx4" }, "s_4LbTK0C63JY": { "origin": "components/section-topic/section-topic.tsx", "displayName": "section_topic_component", "canonicalFilename": "s_4lbtk0c63jy", "hash": "4LbTK0C63JY", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_6e5F0RIawGc": { "origin": "components/section-comments/section-comments.tsx", "displayName": "section_comments_component", "canonicalFilename": "s_6e5f0riawgc", "hash": "6e5F0RIawGc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_7gMngGZozZg": { "origin": "components/comment/comment.tsx", "displayName": "comment_component", "canonicalFilename": "s_7gmnggzozzg", "hash": "7gMngGZozZg", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_8j6XIgveZCc": { "origin": "components/menu/menu.tsx", "displayName": "menu_component", "canonicalFilename": "s_8j6xigvezcc", "hash": "8j6XIgveZCc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_9OkG00AoShE": { "origin": "components/author/author.tsx", "displayName": "author_component", "canonicalFilename": "s_9okg00aoshe", "hash": "9OkG00AoShE", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_KafZPA4KZLA": { "origin": "components/section/section.tsx", "displayName": "section_component", "canonicalFilename": "s_kafzpa4kzla", "hash": "KafZPA4KZLA", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_Xk3MjqlAJx4": { "origin": "components/section-video/section-video.tsx", "displayName": "section_video_component", "canonicalFilename": "s_xk3mjqlajx4", "hash": "Xk3MjqlAJx4", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_YnxdFAiIhz4": { "origin": "components/card/card.tsx", "displayName": "card_component", "canonicalFilename": "s_ynxdfaiihz4", "hash": "YnxdFAiIhz4", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_ZG5NmNv3vZg": { "origin": "components/footer/footer.tsx", "displayName": "footer_component", "canonicalFilename": "s_zg5nmnv3vzg", "hash": "ZG5NmNv3vZg", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_aRWrO5CEhBc": { "origin": "components/head/head.tsx", "displayName": "head_component", "canonicalFilename": "s_arwro5cehbc", "hash": "aRWrO5CEhBc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_iIEFR4Lrsg4": { "origin": "routes/[topic]/index.tsx", "displayName": "_topic__component", "canonicalFilename": "s_iiefr4lrsg4", "hash": "iIEFR4Lrsg4", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_lWjUoUq84ME": { "origin": "routes/index.tsx", "displayName": "routes_component", "canonicalFilename": "s_lwjuouq84me", "hash": "lWjUoUq84ME", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_mUNWJPoUEcs": { "origin": "components/section-cta/section-cta.tsx", "displayName": "section_cta_component", "canonicalFilename": "s_munwjpouecs", "hash": "mUNWJPoUEcs", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_mYsiJcA4IBc": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component", "canonicalFilename": "s_mysijca4ibc", "hash": "mYsiJcA4IBc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_nd8yk3KO22c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "RouterOutlet_component", "canonicalFilename": "s_nd8yk3ko22c", "hash": "nd8yk3KO22c", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_z1nvHyEppoI": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component", "canonicalFilename": "s_z1nvhyeppoi", "hash": "z1nvHyEppoI", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_z8saDCzoko8": { "origin": "routes/layout.tsx", "displayName": "layout_component", "canonicalFilename": "s_z8sadczoko8", "hash": "z8saDCzoko8", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_7RXsVZFEVkQ": { "origin": "components/footer/footer.tsx", "displayName": "footer_component_useStylesScoped", "canonicalFilename": "s_7rxsvzfevkq", "hash": "7RXsVZFEVkQ", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_ZG5NmNv3vZg" }, "s_CgEvv1IhB9s": { "origin": "components/section-video/section-video.tsx", "displayName": "section_video_component_useStylesScoped", "canonicalFilename": "s_cgevv1ihb9s", "hash": "CgEvv1IhB9s", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_Xk3MjqlAJx4" }, "s_M0FIA8mDlgA": { "origin": "components/section-cta/section-cta.tsx", "displayName": "section_cta_component_useStylesScoped", "canonicalFilename": "s_m0fia8mdlga", "hash": "M0FIA8mDlgA", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_mUNWJPoUEcs" }, "s_SN3aXXYhgG8": { "origin": "components/comment/comment.tsx", "displayName": "comment_component_useStylesScoped", "canonicalFilename": "s_sn3axxyhgg8", "hash": "SN3aXXYhgG8", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_7gMngGZozZg" }, "s_WTpUzqKbtAQ": { "origin": "components/section-topic/section-topic.tsx", "displayName": "section_topic_component_useStylesScoped", "canonicalFilename": "s_wtpuzqkbtaq", "hash": "WTpUzqKbtAQ", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_4LbTK0C63JY" }, "s_Wb3hxYxJwBo": { "origin": "components/card/card.tsx", "displayName": "card_component_useStylesScoped", "canonicalFilename": "s_wb3hxyxjwbo", "hash": "Wb3hxYxJwBo", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_YnxdFAiIhz4" }, "s_XTGkpgNab0M": { "origin": "components/section/section.tsx", "displayName": "section_component_useStylesScoped", "canonicalFilename": "s_xtgkpgnab0m", "hash": "XTGkpgNab0M", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_KafZPA4KZLA" }, "s_Yi51Li7iOAs": { "origin": "components/section-comments/section-comments.tsx", "displayName": "section_comments_component_useStylesScoped", "canonicalFilename": "s_yi51li7ioas", "hash": "Yi51Li7iOAs", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_6e5F0RIawGc" }, "s_ckdDfn0i400": { "origin": "components/author/author.tsx", "displayName": "author_component_useStylesScoped", "canonicalFilename": "s_ckddfn0i400", "hash": "ckdDfn0i400", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_9OkG00AoShE" }, "s_n70Gc0CIChg": { "origin": "components/menu/menu.tsx", "displayName": "menu_component_useStylesScoped", "canonicalFilename": "s_n70gc0cichg", "hash": "n70Gc0CIChg", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_8j6XIgveZCc" } }, "mapping": { "s_hA9UPaY8sNQ": "q-3ecd6695.js", "s_skxgNVWVOT8": "q-3ecd6695.js", "s_uVE5iM9H73c": "q-3ecd6695.js", "s_AaAlzKH0KlQ": "q-88aa0d7f.js", "s_8tRoNT5nsJU": "q-5b2a2e82.js", "s_4LbTK0C63JY": "q-60dba0ed.js", "s_6e5F0RIawGc": "q-8edadf03.js", "s_7gMngGZozZg": "q-d5181ad2.js", "s_8j6XIgveZCc": "q-317a3acd.js", "s_9OkG00AoShE": "q-37a15c46.js", "s_KafZPA4KZLA": "q-a9c836c4.js", "s_Xk3MjqlAJx4": "q-5b2a2e82.js", "s_YnxdFAiIhz4": "q-c257a29b.js", "s_ZG5NmNv3vZg": "q-c2d580a8.js", "s_aRWrO5CEhBc": "q-7fd04080.js", "s_iIEFR4Lrsg4": "q-e6ab7e8e.js", "s_lWjUoUq84ME": "q-aef6c4be.js", "s_mUNWJPoUEcs": "q-c6f4465c.js", "s_mYsiJcA4IBc": "q-3ecd6695.js", "s_nd8yk3KO22c": "q-f1758af0.js", "s_z1nvHyEppoI": "q-88aa0d7f.js", "s_z8saDCzoko8": "q-a6848e0d.js", "s_7RXsVZFEVkQ": "q-c2d580a8.js", "s_CgEvv1IhB9s": "q-5b2a2e82.js", "s_M0FIA8mDlgA": "q-c6f4465c.js", "s_SN3aXXYhgG8": "q-d5181ad2.js", "s_WTpUzqKbtAQ": "q-60dba0ed.js", "s_Wb3hxYxJwBo": "q-c257a29b.js", "s_XTGkpgNab0M": "q-a9c836c4.js", "s_Yi51Li7iOAs": "q-8edadf03.js", "s_ckdDfn0i400": "q-37a15c46.js", "s_n70Gc0CIChg": "q-317a3acd.js" }, "bundles": { "q-1291ee88.js": { "size": 371, "imports": ["q-52f46922.js"], "dynamicImports": ["q-16d0044b.js", "q-a75d7ecb.js", "q-e62d0a5c.js"], "origins": ["@qwik-city-plan"] }, "q-16d0044b.js": { "size": 171, "imports": ["q-52f46922.js"], "dynamicImports": ["q-aef6c4be.js"], "origins": ["src/routes/index.js"] }, "q-317a3acd.js": { "size": 1806, "imports": ["q-52f46922.js"], "origins": ["src/components/menu/menu.css?used", "src/entry_menu.js", "src/s_8j6xigvezcc.js", "src/s_n70gc0cichg.js"], "symbols": ["s_8j6XIgveZCc", "s_n70Gc0CIChg"] }, "q-37a15c46.js": { "size": 1105, "imports": ["q-52f46922.js"], "origins": ["src/components/author/author.css?used&inline", "src/entry_author.js", "src/s_9okg00aoshe.js", "src/s_ckddfn0i400.js"], "symbols": ["s_9OkG00AoShE", "s_ckdDfn0i400"] }, "q-3ecd6695.js": { "size": 893, "imports": ["q-52f46922.js"], "origins": ["src/entry_Link.js", "src/s_ha9upay8snq.js", "src/s_mysijca4ibc.js", "src/s_skxgnvwvot8.js", "src/s_uve5im9h73c.js"], "symbols": ["s_hA9UPaY8sNQ", "s_mYsiJcA4IBc", "s_skxgNVWVOT8", "s_uVE5iM9H73c"] }, "q-52f46922.js": { "size": 39244, "dynamicImports": ["q-3ecd6695.js", "q-7fd04080.js", "q-88aa0d7f.js", "q-f1758af0.js"], "origins": ["\0vite/preload-helper", "node_modules/@builder.io/qwik-city/index.qwik.mjs", "node_modules/@builder.io/qwik/core.min.mjs", "src/components/head/head.css", "src/components/head/head.js", "src/global.css", "src/root.js"] }, "q-5b2a2e82.js": { "size": 2189, "imports": ["q-52f46922.js"], "dynamicImports": ["q-37a15c46.js"], "origins": ["src/components/author/author.js", "src/components/section-video/section-video.css?used&inline", "src/entry_section_video.js", "src/s_8tront5nsju.js", "src/s_cgevv1ihb9s.js", "src/s_xk3mjqlajx4.js"], "symbols": ["s_8tRoNT5nsJU", "s_CgEvv1IhB9s", "s_Xk3MjqlAJx4"] }, "q-60dba0ed.js": { "size": 1063, "imports": ["q-52f46922.js", "q-c7bb4051.js"], "dynamicImports": ["q-c257a29b.js"], "origins": ["src/components/card/card.js", "src/components/section-topic/section-topic.css?used&inline", "src/entry_section_topic.js", "src/s_4lbtk0c63jy.js", "src/s_wtpuzqkbtaq.js"], "symbols": ["s_4LbTK0C63JY", "s_WTpUzqKbtAQ"] }, "q-7fd04080.js": { "size": 1979, "imports": ["q-52f46922.js"], "origins": ["src/components/head/social.js", "src/entry_head.js", "src/s_arwro5cehbc.js"], "symbols": ["s_aRWrO5CEhBc"] }, "q-88aa0d7f.js": { "size": 1460, "imports": ["q-52f46922.js"], "dynamicImports": ["q-1291ee88.js"], "origins": ["@builder.io/qwik/build", "src/entry_QwikCity.js", "src/s_aaalzkh0klq.js", "src/s_z1nvhyeppoi.js"], "symbols": ["s_AaAlzKH0KlQ", "s_z1nvHyEppoI"] }, "q-8edadf03.js": { "size": 1116, "imports": ["q-52f46922.js", "q-c7bb4051.js"], "dynamicImports": ["q-d5181ad2.js"], "origins": ["src/components/comment/comment.js", "src/components/section-comments/section-comments.css?used&inline", "src/entry_section_comments.js", "src/s_6e5f0riawgc.js", "src/s_yi51li7ioas.js"], "symbols": ["s_6e5F0RIawGc", "s_Yi51Li7iOAs"] }, "q-a6848e0d.js": { "size": 317, "imports": ["q-52f46922.js"], "dynamicImports": ["q-317a3acd.js", "q-c2d580a8.js"], "origins": ["src/components/footer/footer.js", "src/components/menu/menu.js", "src/entry_layout.js", "src/s_z8sadczoko8.js"], "symbols": ["s_z8saDCzoko8"] }, "q-a75d7ecb.js": { "size": 197, "imports": ["q-52f46922.js"], "dynamicImports": ["q-e6ab7e8e.js"], "origins": ["src/routes/[topic]/index.js"] }, "q-a9c836c4.js": { "size": 983, "imports": ["q-52f46922.js"], "origins": ["src/components/section/section.css?used&inline", "src/entry_section.js", "src/s_kafzpa4kzla.js", "src/s_xtgkpgnab0m.js"], "symbols": ["s_KafZPA4KZLA", "s_XTGkpgNab0M"] }, "q-aef6c4be.js": { "size": 91, "imports": ["q-52f46922.js"], "origins": ["src/entry_routes.js", "src/s_lwjuouq84me.js"], "symbols": ["s_lWjUoUq84ME"] }, "q-ba96c4ef.js": { "size": 58, "imports": ["q-52f46922.js"] }, "q-c257a29b.js": { "size": 657, "imports": ["q-52f46922.js"], "origins": ["src/components/card/card.css?used&inline", "src/entry_card.js", "src/s_wb3hxyxjwbo.js", "src/s_ynxdfaiihz4.js"], "symbols": ["s_Wb3hxYxJwBo", "s_YnxdFAiIhz4"] }, "q-c2d580a8.js": { "size": 1100, "imports": ["q-52f46922.js"], "origins": ["src/components/footer/footer.css?used&inline", "src/entry_footer.js", "src/s_7rxsvzfevkq.js", "src/s_zg5nmnv3vzg.js"], "symbols": ["s_7RXsVZFEVkQ", "s_ZG5NmNv3vZg"] }, "q-c6f4465c.js": { "size": 1379, "imports": ["q-52f46922.js"], "origins": ["src/components/section-cta/section-cta.css?used", "src/entry_section_cta.js", "src/s_m0fia8mdlga.js", "src/s_munwjpouecs.js"], "symbols": ["s_M0FIA8mDlgA", "s_mUNWJPoUEcs"] }, "q-c7bb4051.js": { "size": 165, "imports": ["q-52f46922.js"], "dynamicImports": ["q-e6ab7e8e.js"], "origins": ["src/routes/[topic]/index.tsx"] }, "q-d5181ad2.js": { "size": 1033, "imports": ["q-52f46922.js"], "origins": ["src/components/comment/comment.css?used&inline", "src/entry_comment.js", "src/s_7gmnggzozzg.js", "src/s_sn3axxyhgg8.js"], "symbols": ["s_7gMngGZozZg", "s_SN3aXXYhgG8"] }, "q-e62d0a5c.js": { "size": 158, "imports": ["q-52f46922.js"], "dynamicImports": ["q-a6848e0d.js"], "origins": ["src/routes/layout.js"] }, "q-e6ab7e8e.js": { "size": 8358, "imports": ["q-52f46922.js", "q-a75d7ecb.js"], "dynamicImports": ["q-5b2a2e82.js", "q-60dba0ed.js", "q-8edadf03.js", "q-a9c836c4.js", "q-c6f4465c.js"], "origins": ["src/components/section-comments/section-comments.js", "src/components/section-cta/section-cta.js", "src/components/section-topic/section-topic.js", "src/components/section-video/section-video.js", "src/components/section/section.js", "src/context/store.js", "src/entry__topic_.js", "src/s_iiefr4lrsg4.js"], "symbols": ["s_iIEFR4Lrsg4"] }, "q-f1758af0.js": { "size": 240, "imports": ["q-52f46922.js"], "origins": ["src/entry_RouterOutlet.js", "src/s_nd8yk3ko22c.js"], "symbols": ["s_nd8yk3KO22c"] } }, "injections": [{ "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-cc263384.css" } }, { "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-385cde7f.css" } }, { "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-e95fe3e8.css" } }], "version": "1", "options": { "target": "client", "buildMode": "production", "forceFullBuild": true, "entryStrategy": { "type": "smart" } }, "platform": { "qwik": "0.0.108", "vite": "", "rollup": "2.77.3", "env": "node", "os": "win32", "node": "16.15.1" } };
+const manifest = { "symbols": { "s_hA9UPaY8sNQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onClick", "canonicalFilename": "s_ha9upay8snq", "hash": "hA9UPaY8sNQ", "ctxKind": "event", "ctxName": "onClick$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_skxgNVWVOT8": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onMouseOver", "canonicalFilename": "s_skxgnvwvot8", "hash": "skxgNVWVOT8", "ctxKind": "event", "ctxName": "onMouseOver$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_uVE5iM9H73c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component_a_onQVisible", "canonicalFilename": "s_uve5im9h73c", "hash": "uVE5iM9H73c", "ctxKind": "event", "ctxName": "onQVisible$", "captures": true, "parent": "s_mYsiJcA4IBc" }, "s_AaAlzKH0KlQ": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component_useWatch", "canonicalFilename": "s_aaalzkh0klq", "hash": "AaAlzKH0KlQ", "ctxKind": "function", "ctxName": "useWatch$", "captures": true, "parent": "s_z1nvHyEppoI" }, "s_8tRoNT5nsJU": { "origin": "components/section-video/section-video.tsx", "displayName": "section_video_component_useClientEffect", "canonicalFilename": "s_8tront5nsju", "hash": "8tRoNT5nsJU", "ctxKind": "function", "ctxName": "useClientEffect$", "captures": true, "parent": "s_Xk3MjqlAJx4" }, "s_4LbTK0C63JY": { "origin": "components/section-topic/section-topic.tsx", "displayName": "section_topic_component", "canonicalFilename": "s_4lbtk0c63jy", "hash": "4LbTK0C63JY", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_6e5F0RIawGc": { "origin": "components/section-comments/section-comments.tsx", "displayName": "section_comments_component", "canonicalFilename": "s_6e5f0riawgc", "hash": "6e5F0RIawGc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_7gMngGZozZg": { "origin": "components/comment/comment.tsx", "displayName": "comment_component", "canonicalFilename": "s_7gmnggzozzg", "hash": "7gMngGZozZg", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_8j6XIgveZCc": { "origin": "components/menu/menu.tsx", "displayName": "menu_component", "canonicalFilename": "s_8j6xigvezcc", "hash": "8j6XIgveZCc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_9OkG00AoShE": { "origin": "components/author/author.tsx", "displayName": "author_component", "canonicalFilename": "s_9okg00aoshe", "hash": "9OkG00AoShE", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_KafZPA4KZLA": { "origin": "components/section/section.tsx", "displayName": "section_component", "canonicalFilename": "s_kafzpa4kzla", "hash": "KafZPA4KZLA", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_Xk3MjqlAJx4": { "origin": "components/section-video/section-video.tsx", "displayName": "section_video_component", "canonicalFilename": "s_xk3mjqlajx4", "hash": "Xk3MjqlAJx4", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_YnxdFAiIhz4": { "origin": "components/card/card.tsx", "displayName": "card_component", "canonicalFilename": "s_ynxdfaiihz4", "hash": "YnxdFAiIhz4", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_ZG5NmNv3vZg": { "origin": "components/footer/footer.tsx", "displayName": "footer_component", "canonicalFilename": "s_zg5nmnv3vzg", "hash": "ZG5NmNv3vZg", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_aRWrO5CEhBc": { "origin": "components/head/head.tsx", "displayName": "head_component", "canonicalFilename": "s_arwro5cehbc", "hash": "aRWrO5CEhBc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_iIEFR4Lrsg4": { "origin": "routes/[topic]/index.tsx", "displayName": "_topic__component", "canonicalFilename": "s_iiefr4lrsg4", "hash": "iIEFR4Lrsg4", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_lWjUoUq84ME": { "origin": "routes/index.tsx", "displayName": "routes_component", "canonicalFilename": "s_lwjuouq84me", "hash": "lWjUoUq84ME", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_mUNWJPoUEcs": { "origin": "components/section-cta/section-cta.tsx", "displayName": "section_cta_component", "canonicalFilename": "s_munwjpouecs", "hash": "mUNWJPoUEcs", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_mYsiJcA4IBc": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "Link_component", "canonicalFilename": "s_mysijca4ibc", "hash": "mYsiJcA4IBc", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_nd8yk3KO22c": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "RouterOutlet_component", "canonicalFilename": "s_nd8yk3ko22c", "hash": "nd8yk3KO22c", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_z1nvHyEppoI": { "origin": "../node_modules/@builder.io/qwik-city/index.qwik.mjs", "displayName": "QwikCity_component", "canonicalFilename": "s_z1nvhyeppoi", "hash": "z1nvHyEppoI", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_z8saDCzoko8": { "origin": "routes/layout.tsx", "displayName": "layout_component", "canonicalFilename": "s_z8sadczoko8", "hash": "z8saDCzoko8", "ctxKind": "function", "ctxName": "component$", "captures": false, "parent": null }, "s_7RXsVZFEVkQ": { "origin": "components/footer/footer.tsx", "displayName": "footer_component_useStylesScoped", "canonicalFilename": "s_7rxsvzfevkq", "hash": "7RXsVZFEVkQ", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_ZG5NmNv3vZg" }, "s_CgEvv1IhB9s": { "origin": "components/section-video/section-video.tsx", "displayName": "section_video_component_useStylesScoped", "canonicalFilename": "s_cgevv1ihb9s", "hash": "CgEvv1IhB9s", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_Xk3MjqlAJx4" }, "s_M0FIA8mDlgA": { "origin": "components/section-cta/section-cta.tsx", "displayName": "section_cta_component_useStylesScoped", "canonicalFilename": "s_m0fia8mdlga", "hash": "M0FIA8mDlgA", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_mUNWJPoUEcs" }, "s_SN3aXXYhgG8": { "origin": "components/comment/comment.tsx", "displayName": "comment_component_useStylesScoped", "canonicalFilename": "s_sn3axxyhgg8", "hash": "SN3aXXYhgG8", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_7gMngGZozZg" }, "s_WTpUzqKbtAQ": { "origin": "components/section-topic/section-topic.tsx", "displayName": "section_topic_component_useStylesScoped", "canonicalFilename": "s_wtpuzqkbtaq", "hash": "WTpUzqKbtAQ", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_4LbTK0C63JY" }, "s_Wb3hxYxJwBo": { "origin": "components/card/card.tsx", "displayName": "card_component_useStylesScoped", "canonicalFilename": "s_wb3hxyxjwbo", "hash": "Wb3hxYxJwBo", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_YnxdFAiIhz4" }, "s_XTGkpgNab0M": { "origin": "components/section/section.tsx", "displayName": "section_component_useStylesScoped", "canonicalFilename": "s_xtgkpgnab0m", "hash": "XTGkpgNab0M", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_KafZPA4KZLA" }, "s_Yi51Li7iOAs": { "origin": "components/section-comments/section-comments.tsx", "displayName": "section_comments_component_useStylesScoped", "canonicalFilename": "s_yi51li7ioas", "hash": "Yi51Li7iOAs", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_6e5F0RIawGc" }, "s_ckdDfn0i400": { "origin": "components/author/author.tsx", "displayName": "author_component_useStylesScoped", "canonicalFilename": "s_ckddfn0i400", "hash": "ckdDfn0i400", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_9OkG00AoShE" }, "s_n70Gc0CIChg": { "origin": "components/menu/menu.tsx", "displayName": "menu_component_useStylesScoped", "canonicalFilename": "s_n70gc0cichg", "hash": "n70Gc0CIChg", "ctxKind": "function", "ctxName": "useStylesScoped$", "captures": false, "parent": "s_8j6XIgveZCc" } }, "mapping": { "s_hA9UPaY8sNQ": "q-a50a2cba.js", "s_skxgNVWVOT8": "q-a50a2cba.js", "s_uVE5iM9H73c": "q-a50a2cba.js", "s_AaAlzKH0KlQ": "q-9ec42e3f.js", "s_8tRoNT5nsJU": "q-a46d9dca.js", "s_4LbTK0C63JY": "q-98583ad8.js", "s_6e5F0RIawGc": "q-620fae33.js", "s_7gMngGZozZg": "q-2ff079b3.js", "s_8j6XIgveZCc": "q-0c8e0f8c.js", "s_9OkG00AoShE": "q-1417f79d.js", "s_KafZPA4KZLA": "q-792b33ad.js", "s_Xk3MjqlAJx4": "q-a46d9dca.js", "s_YnxdFAiIhz4": "q-0d550ef0.js", "s_ZG5NmNv3vZg": "q-cf30db68.js", "s_aRWrO5CEhBc": "q-8acb5d46.js", "s_iIEFR4Lrsg4": "q-e1222300.js", "s_lWjUoUq84ME": "q-d6b2ff01.js", "s_mUNWJPoUEcs": "q-0412ef4b.js", "s_mYsiJcA4IBc": "q-a50a2cba.js", "s_nd8yk3KO22c": "q-9185785c.js", "s_z1nvHyEppoI": "q-9ec42e3f.js", "s_z8saDCzoko8": "q-db1ed60d.js", "s_7RXsVZFEVkQ": "q-cf30db68.js", "s_CgEvv1IhB9s": "q-a46d9dca.js", "s_M0FIA8mDlgA": "q-0412ef4b.js", "s_SN3aXXYhgG8": "q-2ff079b3.js", "s_WTpUzqKbtAQ": "q-98583ad8.js", "s_Wb3hxYxJwBo": "q-0d550ef0.js", "s_XTGkpgNab0M": "q-792b33ad.js", "s_Yi51Li7iOAs": "q-620fae33.js", "s_ckdDfn0i400": "q-1417f79d.js", "s_n70Gc0CIChg": "q-0c8e0f8c.js" }, "bundles": { "q-0412ef4b.js": { "size": 1379, "imports": ["q-473605e3.js"], "origins": ["src/components/section-cta/section-cta.css?used", "src/entry_section_cta.js", "src/s_m0fia8mdlga.js", "src/s_munwjpouecs.js"], "symbols": ["s_M0FIA8mDlgA", "s_mUNWJPoUEcs"] }, "q-06acf81d.js": { "size": 197, "imports": ["q-473605e3.js"], "dynamicImports": ["q-e1222300.js"], "origins": ["src/routes/[topic]/index.js"] }, "q-0c8e0f8c.js": { "size": 1926, "imports": ["q-473605e3.js"], "origins": ["src/components/menu/menu.css?used", "src/entry_menu.js", "src/s_8j6xigvezcc.js", "src/s_n70gc0cichg.js"], "symbols": ["s_8j6XIgveZCc", "s_n70Gc0CIChg"] }, "q-0d550ef0.js": { "size": 657, "imports": ["q-473605e3.js"], "origins": ["src/components/card/card.css?used&inline", "src/entry_card.js", "src/s_wb3hxyxjwbo.js", "src/s_ynxdfaiihz4.js"], "symbols": ["s_Wb3hxYxJwBo", "s_YnxdFAiIhz4"] }, "q-1417f79d.js": { "size": 1105, "imports": ["q-473605e3.js"], "origins": ["src/components/author/author.css?used&inline", "src/entry_author.js", "src/s_9okg00aoshe.js", "src/s_ckddfn0i400.js"], "symbols": ["s_9OkG00AoShE", "s_ckdDfn0i400"] }, "q-2ff079b3.js": { "size": 1033, "imports": ["q-473605e3.js"], "origins": ["src/components/comment/comment.css?used&inline", "src/entry_comment.js", "src/s_7gmnggzozzg.js", "src/s_sn3axxyhgg8.js"], "symbols": ["s_7gMngGZozZg", "s_SN3aXXYhgG8"] }, "q-3069f854.js": { "size": 58, "imports": ["q-473605e3.js"] }, "q-473605e3.js": { "size": 39244, "dynamicImports": ["q-8acb5d46.js", "q-9185785c.js", "q-9ec42e3f.js", "q-a50a2cba.js"], "origins": ["\0vite/preload-helper", "node_modules/@builder.io/qwik-city/index.qwik.mjs", "node_modules/@builder.io/qwik/core.min.mjs", "src/components/head/head.css", "src/components/head/head.js", "src/global.css", "src/root.js"] }, "q-542a3d30.js": { "size": 165, "imports": ["q-473605e3.js"], "dynamicImports": ["q-e1222300.js"], "origins": ["src/routes/[topic]/index.tsx"] }, "q-620fae33.js": { "size": 1116, "imports": ["q-473605e3.js", "q-542a3d30.js"], "dynamicImports": ["q-2ff079b3.js"], "origins": ["src/components/comment/comment.js", "src/components/section-comments/section-comments.css?used&inline", "src/entry_section_comments.js", "src/s_6e5f0riawgc.js", "src/s_yi51li7ioas.js"], "symbols": ["s_6e5F0RIawGc", "s_Yi51Li7iOAs"] }, "q-792b33ad.js": { "size": 983, "imports": ["q-473605e3.js"], "origins": ["src/components/section/section.css?used&inline", "src/entry_section.js", "src/s_kafzpa4kzla.js", "src/s_xtgkpgnab0m.js"], "symbols": ["s_KafZPA4KZLA", "s_XTGkpgNab0M"] }, "q-81118e01.js": { "size": 158, "imports": ["q-473605e3.js"], "dynamicImports": ["q-db1ed60d.js"], "origins": ["src/routes/layout.js"] }, "q-8acb5d46.js": { "size": 2629, "imports": ["q-473605e3.js"], "origins": ["src/components/head/social.js", "src/entry_head.js", "src/s_arwro5cehbc.js"], "symbols": ["s_aRWrO5CEhBc"] }, "q-9185785c.js": { "size": 240, "imports": ["q-473605e3.js"], "origins": ["src/entry_RouterOutlet.js", "src/s_nd8yk3ko22c.js"], "symbols": ["s_nd8yk3KO22c"] }, "q-98583ad8.js": { "size": 1063, "imports": ["q-473605e3.js", "q-542a3d30.js"], "dynamicImports": ["q-0d550ef0.js"], "origins": ["src/components/card/card.js", "src/components/section-topic/section-topic.css?used&inline", "src/entry_section_topic.js", "src/s_4lbtk0c63jy.js", "src/s_wtpuzqkbtaq.js"], "symbols": ["s_4LbTK0C63JY", "s_WTpUzqKbtAQ"] }, "q-9ec42e3f.js": { "size": 1460, "imports": ["q-473605e3.js"], "dynamicImports": ["q-c3e6b7be.js"], "origins": ["@builder.io/qwik/build", "src/entry_QwikCity.js", "src/s_aaalzkh0klq.js", "src/s_z1nvhyeppoi.js"], "symbols": ["s_AaAlzKH0KlQ", "s_z1nvHyEppoI"] }, "q-a46d9dca.js": { "size": 2189, "imports": ["q-473605e3.js"], "dynamicImports": ["q-1417f79d.js"], "origins": ["src/components/author/author.js", "src/components/section-video/section-video.css?used&inline", "src/entry_section_video.js", "src/s_8tront5nsju.js", "src/s_cgevv1ihb9s.js", "src/s_xk3mjqlajx4.js"], "symbols": ["s_8tRoNT5nsJU", "s_CgEvv1IhB9s", "s_Xk3MjqlAJx4"] }, "q-a50a2cba.js": { "size": 893, "imports": ["q-473605e3.js"], "origins": ["src/entry_Link.js", "src/s_ha9upay8snq.js", "src/s_mysijca4ibc.js", "src/s_skxgnvwvot8.js", "src/s_uve5im9h73c.js"], "symbols": ["s_hA9UPaY8sNQ", "s_mYsiJcA4IBc", "s_skxgNVWVOT8", "s_uVE5iM9H73c"] }, "q-b94d057b.js": { "size": 171, "imports": ["q-473605e3.js"], "dynamicImports": ["q-d6b2ff01.js"], "origins": ["src/routes/index.js"] }, "q-c3e6b7be.js": { "size": 371, "imports": ["q-473605e3.js"], "dynamicImports": ["q-06acf81d.js", "q-81118e01.js", "q-b94d057b.js"], "origins": ["@qwik-city-plan"] }, "q-cf30db68.js": { "size": 1100, "imports": ["q-473605e3.js"], "origins": ["src/components/footer/footer.css?used&inline", "src/entry_footer.js", "src/s_7rxsvzfevkq.js", "src/s_zg5nmnv3vzg.js"], "symbols": ["s_7RXsVZFEVkQ", "s_ZG5NmNv3vZg"] }, "q-d6b2ff01.js": { "size": 91, "imports": ["q-473605e3.js"], "origins": ["src/entry_routes.js", "src/s_lwjuouq84me.js"], "symbols": ["s_lWjUoUq84ME"] }, "q-db1ed60d.js": { "size": 317, "imports": ["q-473605e3.js"], "dynamicImports": ["q-0c8e0f8c.js", "q-cf30db68.js"], "origins": ["src/components/footer/footer.js", "src/components/menu/menu.js", "src/entry_layout.js", "src/s_z8sadczoko8.js"], "symbols": ["s_z8saDCzoko8"] }, "q-e1222300.js": { "size": 8358, "imports": ["q-06acf81d.js", "q-473605e3.js"], "dynamicImports": ["q-0412ef4b.js", "q-620fae33.js", "q-792b33ad.js", "q-98583ad8.js", "q-a46d9dca.js"], "origins": ["src/components/section-comments/section-comments.js", "src/components/section-cta/section-cta.js", "src/components/section-topic/section-topic.js", "src/components/section-video/section-video.js", "src/components/section/section.js", "src/context/store.js", "src/entry__topic_.js", "src/s_iiefr4lrsg4.js"], "symbols": ["s_iIEFR4Lrsg4"] } }, "injections": [{ "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-cc263384.css" } }, { "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-9e787b04.css" } }, { "tag": "link", "location": "head", "attributes": { "rel": "stylesheet", "href": "/build/q-e95fe3e8.css" } }], "version": "1", "options": { "target": "client", "buildMode": "production", "forceFullBuild": true, "entryStrategy": { "type": "smart" } }, "platform": { "qwik": "0.0.108", "vite": "", "rollup": "2.77.3", "env": "node", "os": "win32", "node": "16.15.1" } };
 const Social = () => {
   return /* @__PURE__ */ jsx(Fragment, {
     children: [
+      /* @__PURE__ */ jsx("title", {
+        children: "\u{1F4BB} Convi\xE9rtete en un Programador Backend aprendiendo todo de Cloud y Nodejs"
+      }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:site_name",
-        content: "Aprende programaci\xF3n ahora"
-      }),
-      /* @__PURE__ */ jsx("meta", {
-        name: "twitter:card",
-        content: "summary_large_image"
-      }),
-      /* @__PURE__ */ jsx("meta", {
-        name: "twitter:site",
-        content: "@LeiferMendez"
-      }),
-      /* @__PURE__ */ jsx("meta", {
-        name: "twitter:title",
-        content: "LeiferMendez"
-      }),
-      /* @__PURE__ */ jsx("meta", {
-        name: "twitter:image",
-        content: "https://i.imgur.com/M21denU.png"
+        content: "Convi\xE9rtete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues directamente a la Nube. \u{1F64C} Qu\xE9 esperas mejorar tus habilidades en la programaci\xF3n ahora mismo."
       }),
       /* @__PURE__ */ jsx("meta", {
         name: "description",
-        content: "Todo lo que necesitas para convertirte en un Programador Backend"
+        content: "Convi\xE9rtete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues directamente a la Nube. \u{1F64C} Qu\xE9 esperas mejorar tus habilidades en la programaci\xF3n ahora mismo."
       }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:type",
@@ -7479,11 +7468,11 @@ const Social = () => {
       }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:title",
-        content: "Todo lo que necesitas para convertirte en un Programador Backend"
+        content: "\u{1F4BB} Convi\xE9rtete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs"
       }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:description",
-        content: "Todo lo que necesitas para convertirte en un Programador Backend"
+        content: "Convi\xE9rtete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues directamente a la Nube. \u{1F64C} Qu\xE9 esperas mejorar tus habilidades en la programaci\xF3n ahora mismo."
       }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:type",
@@ -7503,11 +7492,11 @@ const Social = () => {
       }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:image",
-        content: "https://i.imgur.com/M21denU.png"
+        content: "https://i.imgur.com/pJmBsqe.png"
       }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:image:secure_url",
-        content: "https://i.imgur.com/M21denU.png"
+        content: "https://i.imgur.com/z74SfG3.png"
       }),
       /* @__PURE__ */ jsx("meta", {
         property: "og:image:type",
@@ -7520,6 +7509,22 @@ const Social = () => {
       /* @__PURE__ */ jsx("meta", {
         property: "og:image:height",
         content: "630"
+      }),
+      /* @__PURE__ */ jsx("meta", {
+        name: "twitter:card",
+        content: "summary_large_image"
+      }),
+      /* @__PURE__ */ jsx("meta", {
+        name: "twitter:site",
+        content: "@LeiferMendez"
+      }),
+      /* @__PURE__ */ jsx("meta", {
+        name: "twitter:title",
+        content: "\u{1F4BB} Convi\xE9rtete en un Programador Backend aprendiendo todo de Cloud y Nodejs"
+      }),
+      /* @__PURE__ */ jsx("meta", {
+        name: "twitter:image",
+        content: "https://i.imgur.com/pJmBsqe.png"
       })
     ]
   });
@@ -7536,9 +7541,6 @@ const Head = /* @__PURE__ */ componentQrl(inlinedQrl(() => {
       }),
       /* @__PURE__ */ jsx("meta", {
         charSet: "utf-8"
-      }),
-      /* @__PURE__ */ jsx("title", {
-        children: "La programaci\xF3n es el ahora y el futuro"
       }),
       /* @__PURE__ */ jsx("meta", {
         name: "viewport",

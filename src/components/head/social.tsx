@@ -1,14 +1,18 @@
 export const Social = () => {
   return (
     <>
-      <meta property="og:site_name" content="Aprende programación ahora" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@LeiferMendez" />
-      <meta name="twitter:title" content="LeiferMendez" />
-      <meta name="twitter:image" content="https://i.imgur.com/M21denU.png" />
+      <title>
+        💻 Conviértete en un Programador Backend aprendiendo todo de Cloud y
+        Nodejs
+      </title>
+      <meta
+        property="og:site_name"
+        content="Conviértete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
+      />
+
       <meta
         name="description"
-        content="Todo lo que necesitas para convertirte en un Programador Backend"
+        content="Conviértete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
       />
       <meta property="og:type" content="website" />
       <meta
@@ -17,11 +21,11 @@ export const Social = () => {
       />
       <meta
         property="og:title"
-        content="Todo lo que necesitas para convertirte en un Programador Backend"
+        content="💻 Conviértete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs"
       />
       <meta
         property="og:description"
-        content="Todo lo que necesitas para convertirte en un Programador Backend"
+        content="Conviértete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
       />
       <meta property="og:type" content="article" />
       <meta property="og:locale" content="es_ES" />
@@ -29,15 +33,23 @@ export const Social = () => {
       <meta property="og:site_name" content="campaign.codigoencasa.com" />
       <meta
         property="og:image"
-        content="https://i.imgur.com/M21denU.png"
+        content="https://i.imgur.com/pJmBsqe.png"
       ></meta>
       <meta
         property="og:image:secure_url"
-        content="https://i.imgur.com/M21denU.png"
-      ></meta>
+        content="https://i.imgur.com/z74SfG3.png"
+      />
       <meta property="og:image:type" content="image/png"></meta>
       <meta property="og:image:width" content="1200"></meta>
       <meta property="og:image:height" content="630"></meta>
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@LeiferMendez" />
+      <meta
+        name="twitter:title"
+        content="💻 Conviértete en un Programador Backend aprendiendo todo de Cloud y Nodejs"
+      />
+      <meta name="twitter:image" content="https://i.imgur.com/pJmBsqe.png" />
     </>
   );
 };
