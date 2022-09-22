@@ -7,12 +7,12 @@ export const Social = () => {
       </title>
       <meta
         property="og:site_name"
-        content="Conviértete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
+        content="💻 Conviértete en un Programador Backend aprendiendo todo de Cloud y Nodejs"
       />
 
       <meta
         name="description"
-        content="Conviértete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
+        content="🚀 Comienza haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
       />
       <meta property="og:type" content="website" />
       <meta
@@ -25,7 +25,7 @@ export const Social = () => {
       />
       <meta
         property="og:description"
-        content="Conviértete en un Programador Backend aprendiendo todo de Cloud Computing y Nodejs y haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
+        content="🚀 Comienza haciendo tus despliegues  directamente a la Nube. 🙌 Qué esperas mejorar  tus habilidades en la programación ahora mismo."
       />
       <meta property="og:type" content="article" />
       <meta property="og:locale" content="es_ES" />
