@@ -47,14 +47,6 @@ export const Social = () => {
         content="💻 Conviértete en un Programador Backend aprendiendo todo de Cloud y Nodejs"
       />
       <meta name="twitter:image" content="https://i.imgur.com/pJmBsqe.png" />
-
-      <meta
-        property="og:image:secure_url"
-        content="https://i.imgur.com/z74SfG3.png"
-      />
-      <meta property="og:image:type" content="image/png"></meta>
-      <meta property="og:image:width" content="400" />
-      <meta property="og:image:height" content="400" />
     </>
   );
 };
