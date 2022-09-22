@@ -1,6 +1,8 @@
 import { component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
+import { useLocation } from "@builder.io/qwik-city";
 import menuStyle from "./menu.css";
 export default component$(() => {
+  const { params } = useLocation();
   useStylesScoped$(menuStyle);
 
   const state = useStore<{
@@ -20,7 +22,7 @@ export default component$(() => {
       // },
       {
         name: "Backend",
-        link: "/node",
+        link: "node",
         icon: "/img/ts.svg",
         size: { w: "20px", h: "20px" },
       },
@@ -38,7 +40,7 @@ export default component$(() => {
   });
 
   const renderLink = state.items.map((item) => (
-    <li>
+    <li class={params.topic === `${item.link}` ? "active" : ""}>
       <a href={item.link}>
         <span>
           <img
