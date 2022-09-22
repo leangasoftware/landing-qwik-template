@@ -49,7 +49,6 @@ export default component$(() => {
 
   return (
     <>
-      {" "}
       <Section>
         <slot q:slot="title">
           {renderTitle(getValueFrom(versionPage, "title", topic))}

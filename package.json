@@ -15,9 +15,11 @@
     "serve": "node server/entry.express",
     "start": "npm run dev",
     "typecheck": "tsc --incremental --noEmit",
+    "partytown": "partytown copylib public/~partytown",
     "netlify": "netlify deploy  --prod"
   },
   "devDependencies": {
+    "@builder.io/partytown": "^0.7.0",
     "@builder.io/qwik": "0.0.108",
     "@netlify/vite-plugin-netlify-edge": "^1.1.0",
     "@types/eslint": "8.4.6",

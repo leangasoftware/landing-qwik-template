@@ -12,10 +12,6 @@ export default component$(() => {
 
   useClientEffect$(() => {
     state.load = true;
-    const scriptVimeo = document.createElement("script");
-    scriptVimeo.src = "https://player.vimeo.com/api/player.js";
-    scriptVimeo.async = true;
-    document.body.appendChild(scriptVimeo);
     return () => null;
   });
 

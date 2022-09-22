@@ -1,4 +1,4 @@
-import { component$, Slot, useContextProvider } from "@builder.io/qwik";
+import { component$, Slot, useClientEffect$, useStore } from "@builder.io/qwik";
 import Footer from "../components/footer/footer";
 import Menu from "../components/menu/menu";
 
