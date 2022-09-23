@@ -1,19 +1,8 @@
-import {
-  component$,
-  useStore,
-  useStylesScoped$,
-  useClientEffect$,
-} from "@builder.io/qwik";
+import { component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
 import Author from "../author/author";
 import sectionStyle from "./section-video.css?inline";
 export default component$(() => {
   useStylesScoped$(sectionStyle);
-  const state = useStore({ load: false });
-
-  useClientEffect$(() => {
-    state.load = true;
-    return () => null;
-  });
 
   const renderVideo = (
     <div style="padding:56.25% 0 0 0;position:relative;">
@@ -33,9 +22,7 @@ export default component$(() => {
   return (
     <section id="section-video" class={"section"}>
       <div class="section-video-wrapper">
-        <div class="iframe-video">
-          {state.load ? renderVideo : renderVideoPrev}
-        </div>
+        <div class="iframe-video">{renderVideo}</div>
       </div>
       <Author />
     </section>
