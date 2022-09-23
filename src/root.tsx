@@ -5,9 +5,17 @@ import Head from "./components/head/head";
 import "./global.css";
 
 export default () => {
-  const snippetText = partytownSnippet();
-  const googlePixel = ` window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-TPZPYJ5SJT'); `;
-  const facebookPixel = `!function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '1515077412248821'); fbq('track', 'PageView');`;
+  const snippetText = partytownSnippet({
+    resolveUrl: function (url) {
+      const proxyMap: any = {
+        "www.googletagmanager.com": "d2lderwexwm7la.cloudfront.net",
+      };
+      url.hostname = proxyMap[url.hostname] || url.hostname;
+      return url;
+    },
+  });
+  const googlePixel = `function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-NHJQPYGYCB");`;
+  const facebookPixel = `!function(e,t,n,a,c,o,s){e.fbq||(c=e.fbq=function(){c.callMethod?c.callMethod.apply(c,arguments):c.queue.push(arguments)},e._fbq||(e._fbq=c),c.push=c,c.loaded=!0,c.version="2.0",c.queue=[],(o=t.createElement(n)).async=!0,o.src=a,(s=t.getElementsByTagName(n)[0]).parentNode.insertBefore(o,s))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init","1236522833796620"),fbq("track","PageView");`;
 
   return (
     <QwikCity>
