@@ -16,7 +16,7 @@ export default () => {
       }
       return url;
     },
-    forward: ["fbq"],
+    forward: ["dataLayer.push", "fbq"],
   });
 
   const googlePixel = `function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-NHJQPYGYCB");`;
@@ -39,12 +39,13 @@ export default () => {
         async
         src="https://player.vimeo.com/api/player.js"
       />
+
       <noscript>
         <img
           height="1"
           width="1"
           style="display:none"
-          src="https://www.facebook.com/tr?id=1515077412248821&ev=PageView&noscript=1"
+          src="https://www.facebook.com/tr?id=1236522833796620&ev=PageView&noscript=1"
         />
       </noscript>
       <body lang="es">
