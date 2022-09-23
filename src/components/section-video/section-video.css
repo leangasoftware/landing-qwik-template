@@ -22,11 +22,12 @@
 
 .section .video-loading {
     background-color: white;
+    background-image: url('/img/placeholder.avif');
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    height: 400px;
+    height: 445px;
 
     top: 0;
     width: 100%;
